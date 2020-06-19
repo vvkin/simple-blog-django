@@ -1,0 +1,37 @@
+header#main-page-header{
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+    padding: 20px 0px 0px 0px;
+    height: 80px;
+}
+
+h1#page-header{
+    padding: 0px;
+    margin: 10px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+a#back-to-home{
+    text-decoration: none;
+    font-size: 18px;
+    color:red;
+}
+
+#home-blog-title a{
+    text-decoration: none;
+    color: blue;
+}
+
+#home-blog-title a:hover{
+    color:red;
+}
+
+article#content{
+    margin: 0px 20px;
+}

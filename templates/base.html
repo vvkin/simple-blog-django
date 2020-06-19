@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block title %}
+        {% endblock title %}
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header id = "main-page-header">
+            {% block header_content %}
+            {% endblock header_content%}
+        </header>
+        <article id = "content">
+            {% block content %}
+            {% endblock content %} 
+        </article>
+    </body>
+</html>
