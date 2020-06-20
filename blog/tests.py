@@ -71,3 +71,27 @@ class TestPostModel(TestCase):
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, 'title')
         self.assertTemplateUsed(response, 'one_post.html')
+
+    def test_get_absolute_url(self):
+        self.assertEqual(self.post.get_absolute_url(), '/post/1/')
+
+    def test_create_view(self):
+        response = self.client.post('/post/new/', {
+            'title' : 'title',
+            'body' : 'body',
+            'author' : self.user
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'title')
+        self.assertContains(response, 'body')
+
+    def test_update_view(self):
+        response = self.client.post(reverse('update_post', args='1'), {
+            'title' : 'new title',
+            'body' : 'new body',
+        })
+        self.assertEqual(response.status_code, 302)
+
+    def test_delete_view(self):
+        reponse = self.client.get(reverse('delete_post', args='1'))
+        self.assertEqual(reponse.status_code, 200)
