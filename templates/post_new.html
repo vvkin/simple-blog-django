@@ -9,11 +9,7 @@
 {% endblock header_content %}
 
 {% block right_nav_content %}
-    <ul>
-        <li><a href="{% url 'home' %}" id="right-nav">Back to home</a></li>
-        <li><a>Delete post</a></li>
-        <li><a>Edit post</a></li>
-    </ul>
+    <a href="{% url 'home' %}" id="right-nav">Back to home</a>
 {% endblock right_nav_content %}
 
 {% block content %}
