@@ -9,7 +9,10 @@ class Post(models.Model):
         return self.title
 
     def short_text(self):
-        return f'{self.body[:500]} ...'
+        if len(self.body) > 500:
+            return self.body[:500] + '...'
+        else:
+            return self.body
 
     def full_text(self):
         return self.body

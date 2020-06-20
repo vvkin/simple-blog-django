@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Create post</title>
+{% endblock title %}
+
+{% block header_content %}
+    <h1 id = "page-header">Create post</h1>
+    {% block right_nav_content %}
+        <a href="{% url 'home' %}" id="right-nav">Back to home</a>
+    {% endblock right_nav_content %}
+{% endblock header_content %}
+
+{% block content %}
+    <form action="" method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+{% endblock content %}

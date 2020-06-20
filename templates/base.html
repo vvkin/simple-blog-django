@@ -9,6 +9,10 @@
     <body>
         <header id = "main-page-header">
             {% block header_content %}
+                <nav id="right-nav">
+                    {% block right_nav_content %}
+                    {% endblock right_nav_content %}
+                </nav>
             {% endblock header_content%}
         </header>
         <article id = "content">

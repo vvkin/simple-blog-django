@@ -3,13 +3,16 @@ header#main-page-header{
     font-size: 16px;
     color: white;
     margin-bottom: 10px;
-    padding: 20px 0px 0px 0px;
+    padding: 20px 20px 0px 0px;
     height: 80px;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1#page-header{
     padding: 0px;
     margin: 10px;
+    align-self: flex-start;
 }
 
 body{
@@ -35,3 +38,18 @@ a#back-to-home{
 article#content{
     margin: 0px 20px;
 }
+
+a#right-nav{
+    text-decoration: none;
+    color:white;
+    justify-self: end;
+    align-self: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    outline: 0px;
+}
+
+a#right-nav:hover{
+    color:gray; 
+}
+

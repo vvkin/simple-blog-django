@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Simple Blog</title>
+    <title>Simple Blog</title>
 {% endblock title %}
 
 {% block header_content %}
-<h1 id = "page-header">Simple Blog</h1>
+    <h1 id = "page-header">Simple Blog</h1>
+    {% block right_nav_content %}
+        <a href="{% url 'create_post' %} " id="right-nav">+New Post</a>
+    {% endblock right_nav_content %}
 {% endblock header_content %}
 
 {% block content %}

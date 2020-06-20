@@ -6,9 +6,11 @@
 
 {% block header_content %}
     <h1 id = "page-header">{{ post.title }}</h1>
+    {% block right_nav_content %}
+    <a href="{% url 'home' %}" id="right-nav">Back to home</a>
+    {% endblock right_nav_content %}
 {% endblock header_content %}
 
 {% block content %}
-    <a href = "{% url 'home' %}" id = "back-to-home">Back to home</a> <br>
     {{ post.full_text }}
 {% endblock content %}
