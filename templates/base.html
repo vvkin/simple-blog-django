@@ -7,14 +7,17 @@
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
     </head>
     <body>
-        <header id = "main-page-header">
-            {% block header_content %}
-                <nav id="right-nav">
-                    {% block right_nav_content %}
-                    {% endblock right_nav_content %}
-                </nav>
-            {% endblock header_content%}
-        </header>
+        <div id = "head-wrapper">
+            <header id = "main-page-header">
+                {% block header_content %}
+                {% endblock header_content %}
+            </header>
+    
+            <nav id="right-nav">
+                {% block right_nav_content %}
+                {% endblock right_nav_content %}
+            </nav>
+        </div>
         <article id = "content">
             {% block content %}
             {% endblock content %} 
