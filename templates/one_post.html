@@ -10,9 +10,9 @@
 
 {% block right_nav_content %}
     <ul>
-        <li><a href="{% url 'home' %}" id="right-nav">Back to home</a></li>
         <li><a href="{% url 'update_post' post.pk %}">Edit post</a></li>
         <li><a href="{% url 'delete_post' post.pk %}">Delete post</a></li>
+        <li><a href="{% url 'home' %}" id="right-nav">Back to home</a></li>
     </ul>
 {% endblock right_nav_content %}
 

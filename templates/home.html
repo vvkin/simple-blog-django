@@ -9,7 +9,12 @@
 {% endblock header_content %}
 
 {% block right_nav_content %}
-    <a href="{% url 'create_post' %}">+New Post</a>
+    <ul>
+        <li><a>About us</a></li>
+        <li><a>Sign in</a></li>
+        <li><a>Sign up</a></li>
+        <li><a href="{% url 'create_post' %}">+New Post</a></li>
+    </ul>
 {% endblock right_nav_content %}
 
 {% block content %}

@@ -1,28 +1,34 @@
 div#head-wrapper{
-    background-color: black;
-    font-size: 16px;
+    background-color: #222;
     color:white;
-    margin-bottom: 10px;
-    padding: 20px 20px 0px 0px;
-    height: 80px;
     display: flex;
     flex-direction: row;
+    padding: 0px 15px;
     justify-content: space-between;
-}
-
-nav#right-nav{
-    margin: 0px;
-    padding: 15px 0px;
-}
-
-h1#page-header{
-    padding: 0px;
-    margin: 10px;
 }
 
 body{
     margin: 0px;
     padding: 0px;
+}
+
+nav#right-nav{
+    align-items: center;
+    margin: 0px;
+}
+
+nav#right-nav a{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    text-decoration: none;
+    outline: 0px;
+    display: block;
+    padding: 16px;
+}
+
+nav#right-nav a:hover{
+    color:gray;
+    cursor: pointer;
 }
 
 #home-blog-title a{
@@ -39,28 +45,27 @@ article#content{
     margin: 0px 20px;
 }
 
-nav#right-nav a{
-    text-decoration: none;
-    color:white;
-    font-weight: bold;
-    outline: 0px;
+header#main-page-header{
+    font-size: 12px;
 }
 
-nav#right-nav a:hover{
-    color:gray;
-    cursor: pointer;
+header#main-page-header h1{
+    margin: 0px;
+    font-family: 'Sriracha', cursive;
 }
 
 nav#right-nav ul{
     list-style-type: none;
-    margin-top: -16px;
+    margin: 0px;
+    overflow: hidden;
 }
 
 nav#right-nav li{
-    margin-bottom: 3px;
+    float: left;
 }
 
-nav#right-nav ul li a{
-    margin: 0px;
+nav#right-nav li a:hover{
+    background-color: #000;
+    color: white;
 }
 
