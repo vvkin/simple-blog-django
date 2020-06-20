@@ -1,8 +1,0 @@
-{
-    "python.pythonPath": "/home/vvkin/.local/share/virtualenvs/Simple-Blog-IE3MP-O4/bin/python",
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-    "--disable=C0111", // missing docstring
-    "--load-plugins=pylint_django",
- ],
-}
