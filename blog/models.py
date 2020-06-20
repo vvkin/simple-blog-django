@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=20, default='')
@@ -16,3 +17,6 @@ class Post(models.Model):
 
     def full_text(self):
         return self.body
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
