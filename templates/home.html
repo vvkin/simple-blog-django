@@ -13,6 +13,9 @@
         <li><a>About us</a></li>
         <li><a href="{% url 'login' %}">Sign in</a></li>
         <li><a>Sign up</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% endif %}
         <li><a href="{% url 'create_post' %}">+New Post</a></li>
     </ul>
 {% endblock right_nav_content %}
