@@ -5,6 +5,7 @@ div#head-wrapper{
     flex-direction: row;
     padding: 0px 15px;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 body{
@@ -67,5 +68,26 @@ nav#right-nav li{
 nav#right-nav li a:hover{
     background-color: #000;
     color: white;
+}
+
+.no-select {
+    -webkit-touch-callout: none; 
+      -webkit-user-select: none;
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none; 
+              user-select: none; 
+  }
+
+p#is-logged{
+    color:green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p#not-logged{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
 }
 

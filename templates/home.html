@@ -11,13 +11,18 @@
 {% block right_nav_content %}
     <ul>
         <li><a>About us</a></li>
-        <li><a>Sign in</a></li>
+        <li><a href="{% url 'login' %}">Sign in</a></li>
         <li><a>Sign up</a></li>
         <li><a href="{% url 'create_post' %}">+New Post</a></li>
     </ul>
 {% endblock right_nav_content %}
 
 {% block content %}
+    {% if user.is_authenticated %}
+        <p id="is-logged">Hi, {{ user.username }} !</p>
+    {% else %}
+        <p id="not-logged">You are not logged!</p>
+    {% endif %}
     {% for post in object_list %}    
         <h2 id = "home-blog-title">
             <a href = "{% url 'post_detail' post.pk %}">{{ post.title }}</a>

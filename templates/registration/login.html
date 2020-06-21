@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Sign in</title>
+{% endblock title %}
+
+{% block header_content %}
+    <h1 id="main-page-header">Sign in</h1>
+{% endblock header_content %}
+
+{% block right_nav_content %}
+    <a href = "{% url 'home' %}">Back to home</a>
+{% endblock right_nav_content %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign in</button>
+    </form>
+{% endblock content %}
+
+
+    
